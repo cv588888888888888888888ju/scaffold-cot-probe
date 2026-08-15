@@ -1,0 +1,254 @@
+{
+ "orig_exact": {
+  "persona": "You are a helpful software engineer assistant.",
+  "samples": [
+   {
+    "chars": 5121,
+    "we": 9,
+    "let_me": 0,
+    "let_s": 5,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 630,
+    "we": 4,
+    "let_me": 0,
+    "let_s": 2,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 9089,
+    "we": 17,
+    "let_me": 0,
+    "let_s": 9,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   }
+  ],
+  "avg": {
+   "chars": 4946.67,
+   "we": 10.0,
+   "let_me": 0.0,
+   "let_s": 5.33,
+   "n_calls": 1.0
+  }
+ },
+ "v_ing_form": {
+  "persona": "You are a helpful software engineering assistant.",
+  "samples": [
+   {
+    "chars": 7370,
+    "we": 15,
+    "let_me": 0,
+    "let_s": 6,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 18341,
+    "we": 4,
+    "let_me": 5,
+    "let_s": 16,
+    "n_calls": 1,
+    "calls": [
+     "str_replace_editor"
+    ]
+   },
+   {
+    "chars": 6769,
+    "we": 8,
+    "let_me": 3,
+    "let_s": 4,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   }
+  ],
+  "avg": {
+   "chars": 10826.67,
+   "we": 9.0,
+   "let_me": 2.67,
+   "let_s": 8.67,
+   "n_calls": 1.0
+  }
+ },
+ "v_word_order": {
+  "persona": "You are a software engineer assistant that is helpful.",
+  "samples": [
+   {
+    "chars": 255,
+    "we": 0,
+    "let_me": 2,
+    "let_s": 0,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 1159,
+    "we": 0,
+    "let_me": 3,
+    "let_s": 1,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 8562,
+    "we": 25,
+    "let_me": 0,
+    "let_s": 11,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   }
+  ],
+  "avg": {
+   "chars": 3325.33,
+   "we": 8.33,
+   "let_me": 1.67,
+   "let_s": 4.0,
+   "n_calls": 1.0
+  }
+ },
+ "v_caps": {
+  "persona": "You are a Helpful Software Engineer Assistant.",
+  "samples": [
+   {
+    "chars": 2070,
+    "we": 1,
+    "let_me": 4,
+    "let_s": 2,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 1658,
+    "we": 6,
+    "let_me": 1,
+    "let_s": 4,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 19661,
+    "we": 6,
+    "let_me": 24,
+    "let_s": 3,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   }
+  ],
+  "avg": {
+   "chars": 7796.33,
+   "we": 4.33,
+   "let_me": 9.67,
+   "let_s": 3.0,
+   "n_calls": 1.0
+  }
+ },
+ "v_split": {
+  "persona": "You are helpful. You are a software engineer assistant.",
+  "samples": [
+   {
+    "chars": 2086,
+    "we": 13,
+    "let_me": 0,
+    "let_s": 5,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 373,
+    "we": 4,
+    "let_me": 0,
+    "let_s": 1,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 1833,
+    "we": 1,
+    "let_me": 2,
+    "let_s": 3,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   }
+  ],
+  "avg": {
+   "chars": 1430.67,
+   "we": 6.0,
+   "let_me": 0.67,
+   "let_s": 3.0,
+   "n_calls": 1.0
+  }
+ },
+ "v_paraphrase": {
+  "persona": "You are an assistant for software engineering who is always helpful.",
+  "samples": [
+   {
+    "chars": 898,
+    "we": 0,
+    "let_me": 4,
+    "let_s": 0,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 1866,
+    "we": 1,
+    "let_me": 4,
+    "let_s": 0,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   },
+   {
+    "chars": 17775,
+    "we": 23,
+    "let_me": 0,
+    "let_s": 17,
+    "n_calls": 1,
+    "calls": [
+     "bash"
+    ]
+   }
+  ],
+  "avg": {
+   "chars": 6846.33,
+   "we": 8.0,
+   "let_me": 2.67,
+   "let_s": 5.67,
+   "n_calls": 1.0
+  }
+ }
+}

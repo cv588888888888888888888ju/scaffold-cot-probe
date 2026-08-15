@@ -1,0 +1,1083 @@
+{
+ "1b_std_base_r0": {
+  "label": "1b_std_base_r0",
+  "produced": false,
+  "first_write_round": 2,
+  "rounds_used": 6,
+  "we": 43,
+  "i": 0,
+  "ratio": 1.0,
+  "errs": 1,
+  "api_wall_s": 75.6,
+  "tool_wall_s": 1.3,
+  "total_wall_s": 76.9,
+  "prompt_tokens": 21244,
+  "completion_tokens": 4340,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 446,
+    "api_ms": 4937,
+    "tool_ms": 0,
+    "tool_calls": [
+     "list_dir :: {\"path\": \"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\"}"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 1710,
+    "api_ms": 30751,
+    "tool_ms": 0,
+    "tool_calls": [
+     "write_file :: {\"path\": \"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\\\\game.html\", \"content\": \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  body {\\n    margin: 0;\\n "
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 385,
+    "api_ms": 4698,
+    "tool_ms": 410,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\\\" && ls -l game.html && node --version && python --version\"}"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 68,
+    "api_ms": 4251,
+    "tool_ms": 548,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\\\" && python - <<'PY'\\nimport re, pathlib\\nhtml = pathlib.Path('game.html').read_text(encoding='utf-8')\\nscripts = re.findall(r'<script>(.*?)</script>', html, re.S)\\nprint('script blocks:', len(scripts))\\npathlib.Path('_game_ext"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 3086,
+    "api_ms": 26360,
+    "tool_ms": 386,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\\\" && node <<'NODE'\\nconst fs = require('fs');\\nconst vm = require('vm');\\nconst html = fs.readFileSync('game.html', 'utf8');\\nconst script = html.match(/<script>([\\\\s\\\\S]*?)<\\\\/script>/)[1];\\n\\nlet intervalCb = null;\\nlet keydo"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 459,
+    "api_ms": 4586,
+    "tool_ms": 0,
+    "tool_calls": [
+     "read_file :: {\"path\": \"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\\\\game.html\"}"
+    ]
+   }
+  ]
+ },
+ "1b_std_base_r1": {
+  "label": "1b_std_base_r1",
+  "produced": false,
+  "first_write_round": 2,
+  "rounds_used": 6,
+  "we": 51,
+  "i": 0,
+  "ratio": 1.0,
+  "errs": 2,
+  "api_wall_s": 121.4,
+  "tool_wall_s": 2.4,
+  "total_wall_s": 123.8,
+  "prompt_tokens": 35751,
+  "completion_tokens": 7494,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 538,
+    "api_ms": 5399,
+    "tool_ms": 0,
+    "tool_calls": [
+     "list_dir :: {\"path\": \"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\"}"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 1015,
+    "api_ms": 40484,
+    "tool_ms": 0,
+    "tool_calls": [
+     "write_file :: {\"path\": \"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\\\\game.html\", \"content\": \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  :root {\\n    color-scheme"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 2815,
+    "api_ms": 21624,
+    "tool_ms": 711,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\\\" && node -v && python --version && python - <<'PY'\\nfrom html.parser import HTMLParser\\nfrom pathlib import Path\\n\\nclass P(HTMLParser):\\n    def __init__(self):\\n        super().__init__()\\n        self.scripts=[]\\n        se"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 766,
+    "api_ms": 7968,
+    "tool_ms": 715,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\\\" && { which chromium || which chromium-browser || which google-chrome || which firefox || which chrome || which msedge || true; } ; node -e \\\"try{require('jsdom'); console.log('jsdom available')}catch(e){console.log('jsdom not"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 2699,
+    "api_ms": 30348,
+    "tool_ms": 568,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\\\" && python - <<'PY'\\nfrom html.parser import HTMLParser\\nfrom pathlib import Path\\nclass P(HTMLParser):\\n    def __init__(self):\\n        super().__init__(); self.scripts=[]; self.in_script=False; self.buf=[]\\n    def handle_s"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 2217,
+    "api_ms": 15612,
+    "tool_ms": 380,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"C:\\\\Users\\\\chenty\\\\AppData\\\\Local\\\\Temp\\\\dsh_cot_probe\\\" && ls -l game.html && git status --short game.html 2>/dev/null || true\"}"
+    ]
+   }
+  ]
+ },
+ "1a_std_dec_r1": {
+  "label": "1a_std_dec_r1",
+  "produced": true,
+  "first_write_round": 3,
+  "rounds_used": 6,
+  "we": 109,
+  "i": 0,
+  "ratio": 1.0,
+  "errs": 0,
+  "api_wall_s": 167.6,
+  "tool_wall_s": 2.1,
+  "total_wall_s": 169.7,
+  "prompt_tokens": 42993,
+  "completion_tokens": 10188,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 8224,
+    "api_ms": 48112,
+    "tool_ms": 481,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd && ls -la && command -v node && node --version || true && command -v python && python --version || true\"}"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 935,
+    "api_ms": 7969,
+    "tool_ms": 337,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd -W 2>/dev/null || cygpath -w \\\"$PWD\\\" 2>/dev/null || true; ls -la \\\"$PWD\\\"\"}"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 10348,
+    "api_ms": 66516,
+    "tool_ms": 0,
+    "tool_calls": [
+     "write_file :: {\"path\": \"${PROBE_ROOT}/par_1a_std_dec/rep1/game.html\", \"content\": \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  * {\\n    box"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 2414,
+    "api_ms": 19085,
+    "tool_ms": 786,
+    "tool_calls": [
+     "bash :: {\"command\": \"ls -la game.html && wc -l game.html && grep -nE 'canvas|ArrowUp|ArrowDown|ArrowLeft|ArrowRight|Score|Game Over|restart|requestAnimationFrame|addEventListener' game.html\"}",
+     "bash :: {\"command\": \"python - <<'PY'\\nfrom pathlib import Path\\nimport re, html.parser, sys\\n\\np = Path('game.html')\\ntext = p.read_text(encoding='utf-8')\\n\\nclass P(html.parser.HTMLParser):\\n    def __init__(self):\\n        super().__init__()\\n        self.scripts=[]\\n        self.in_script=False\\n        "
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 2443,
+    "api_ms": 19294,
+    "tool_ms": 0,
+    "tool_calls": [
+     "str_replace_editor :: {\"action\": \"str_replace\", \"path\": \"${PROBE_ROOT}/par_1a_std_dec/rep1/game.html\", \"old_string\": \"      var pad = j === 0 ? 1 : 2;\\n      ctx.fillStyle = j === 0 ? '#4cd137' : '#7bed9f';\\n      ctx.beginPath();\\n      ctx.roundRect(\\n        segment.x * CELL_SIZE + p"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 80,
+    "api_ms": 6598,
+    "tool_ms": 472,
+    "tool_calls": [
+     "bash :: {\"command\": \"python - <<'PY'\\nfrom pathlib import Path\\nfrom html.parser import HTMLParser\\nimport re\\n\\ntext = Path('game.html').read_text(encoding='utf-8')\\n\\nclass ScriptExtractor(HTMLParser):\\n    def __init__(self):\\n        super().__init__()\\n        self.scripts = []\\n        self.in_script "
+    ]
+   }
+  ]
+ },
+ "1a_std_dec_r0": {
+  "label": "1a_std_dec_r0",
+  "produced": false,
+  "first_write_round": 1,
+  "rounds_used": 6,
+  "we": 117,
+  "i": 3,
+  "ratio": 0.97,
+  "errs": 2,
+  "api_wall_s": 166.7,
+  "tool_wall_s": 4.3,
+  "total_wall_s": 171.0,
+  "prompt_tokens": 49917,
+  "completion_tokens": 10392,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 19709,
+    "api_ms": 108421,
+    "tool_ms": 0,
+    "tool_calls": [
+     "write_file :: {\"path\": \"${PROBE_ROOT}/game.html\", \"content\": \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n  <meta charset=\\\"UTF-8\\\">\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n  <title>Snake Game</title>\\n  <style>\\n    * { box-sizing: border"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 94,
+    "api_ms": 4541,
+    "tool_ms": 394,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"${PROBE_ROOT}\\\" && ls -l game.html && wc -c game.html && node --version\"}"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 223,
+    "api_ms": 9307,
+    "tool_ms": 450,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"${PROBE_ROOT}\\\" && python - <<'PY'\\nimport re, pathlib, tempfile, os\\nhtml = pathlib.Path('game.html').read_text(encoding='utf-8')\\nchecks = {\\n    'doctype': html.lstrip().lower().startswith('<!doctype html>'),\\n    'canvas_present': '<canvas' in"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 767,
+    "api_ms": 7549,
+    "tool_ms": 576,
+    "tool_calls": [
+     "bash :: {\"command\": \"where msedge 2>/dev/null || true; where chrome 2>/dev/null || true; where chromium 2>/dev/null || true; ls \\\"/c/Program Files/Google/Chrome/Application/chrome.exe\\\" 2>/dev/null || true; ls \\\"/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe\\\" 2>/dev/null || true\"}"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 717,
+    "api_ms": 8184,
+    "tool_ms": 1491,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"${PROBE_ROOT}\\\" && \\\"/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe\\\" --headless --disable-gpu --no-sandbox --dump-dom \\\"file:///${PROBE_ROOT}/game.html\\\" > edge_dom.html 2>edge_err.log; status=$?; "
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 4965,
+    "api_ms": 28655,
+    "tool_ms": 1421,
+    "tool_calls": [
+     "bash :: {\"command\": \"cd \\\"${PROBE_ROOT}\\\" && \\\"/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe\\\" --headless --disable-gpu --no-sandbox --virtual-time-budget=3000 --dump-dom \\\"file:///${PROBE_ROOT}/game.html\\\" > edge_after_3s."
+    ]
+   }
+  ]
+ },
+ "2a_min_dec_r0": {
+  "label": "2a_min_dec_r0",
+  "produced": true,
+  "first_write_round": null,
+  "rounds_used": 6,
+  "we": 111,
+  "i": 0,
+  "ratio": 1.0,
+  "errs": 1,
+  "api_wall_s": 157.5,
+  "tool_wall_s": 2.2,
+  "total_wall_s": 159.7,
+  "prompt_tokens": 47402,
+  "completion_tokens": 9853,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 22255,
+    "api_ms": 95621,
+    "tool_ms": 344,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd && ls -la\"}"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 119,
+    "api_ms": 26430,
+    "tool_ms": 407,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > game.html <<'EOF'\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  * { box-sizing: border-box; }\\n  html, body { height: 100%; }\\n  body {\\n    "
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 720,
+    "api_ms": 8019,
+    "tool_ms": 372,
+    "tool_calls": [
+     "bash :: {\"command\": \"ls -la; wc -c game.html 2>/dev/null || echo 'game.html missing'; tail -5 game.html 2>/dev/null\"}"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 218,
+    "api_ms": 3848,
+    "tool_ms": 357,
+    "tool_calls": [
+     "bash :: {\"command\": \"tail -40 game.html; echo '---'; wc -l game.html\"}"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 427,
+    "api_ms": 4925,
+    "tool_ms": 303,
+    "tool_calls": [
+     "bash :: {\"command\": \"sed -n '260,295p' game.html\"}"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 2874,
+    "api_ms": 18679,
+    "tool_ms": 402,
+    "tool_calls": [
+     "bash :: {\"command\": \"sed -i '$ d' game.html\\ncat >> game.html <<'EOF'\\n        restartGame();\\n      }\\n      return;\\n    }\\n\\n    if ((key === ' ' || key === 'Spacebar' || key === 'Enter') && (state === 'gameover' || state === 'win')) {\\n      e.preventDefault();\\n      restartGame();\\n    }\\n  }\\n\\n  fun"
+    ]
+   }
+  ]
+ },
+ "2b_min_base_r1": {
+  "label": "2b_min_base_r1",
+  "produced": true,
+  "first_write_round": null,
+  "rounds_used": 6,
+  "we": 31,
+  "i": 0,
+  "ratio": 1.0,
+  "errs": 2,
+  "api_wall_s": 100.1,
+  "tool_wall_s": 1.9,
+  "total_wall_s": 102.0,
+  "prompt_tokens": 36038,
+  "completion_tokens": 7884,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 3276,
+    "api_ms": 50099,
+    "tool_ms": 0,
+    "tool_calls": [
+     "str_replace_editor :: {\"action\": \"create\", \"path\": \"/game.html\", \"new_string\": \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n  <meta charset=\\\"UTF-8\\\">\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n  <title>Snake Game</title>\\n  <style>\\n    * {\\n      box-sizing: border-box;\\n      margi"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 91,
+    "api_ms": 4032,
+    "tool_ms": 367,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd && ls -la && whoami\"}"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 209,
+    "api_ms": 29812,
+    "tool_ms": 405,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > /tmp/dsh_cot_probe/par_2b_min_base/rep1/game.html <<'EOF'\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n  <meta charset=\\\"UTF-8\\\">\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n  <title>Snake Game</title>\\n  <style>\\n    * {\\n      box-sizing: bord"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 61,
+    "api_ms": 3393,
+    "tool_ms": 359,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd; ls -la game.html; head -c 200 game.html; wc -l game.html\"}"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 208,
+    "api_ms": 4792,
+    "tool_ms": 367,
+    "tool_calls": [
+     "bash :: {\"command\": \"tail -20 game.html; echo '---'; grep -c '</html>' game.html; grep -c '</script>' game.html\"}"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 966,
+    "api_ms": 7968,
+    "tool_ms": 416,
+    "tool_calls": [
+     "bash :: {\"command\": \"tail -5 game.html; echo '---'; wc -c game.html; wc -l game.html\"}"
+    ]
+   }
+  ]
+ },
+ "2b_min_base_r0": {
+  "label": "2b_min_base_r0",
+  "produced": true,
+  "first_write_round": null,
+  "rounds_used": 6,
+  "we": 39,
+  "i": 0,
+  "ratio": 1.0,
+  "errs": 2,
+  "api_wall_s": 105.9,
+  "tool_wall_s": 2.0,
+  "total_wall_s": 108.0,
+  "prompt_tokens": 28909,
+  "completion_tokens": 7556,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 6321,
+    "api_ms": 33343,
+    "tool_ms": 298,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd && ls -la\"}"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 53,
+    "api_ms": 28091,
+    "tool_ms": 0,
+    "tool_calls": [
+     "str_replace_editor :: {\"action\": \"create\", \"path\": \"/tmp/dsh_cot_probe/par_2b_min_base/rep0/game.html\", \"new_string\": \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  html, body {\\n    "
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 636,
+    "api_ms": 5528,
+    "tool_ms": 343,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd && mkdir -p /tmp/dsh_cot_probe/par_2b_min_base/rep0 && ls -la\"}"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 202,
+    "api_ms": 22776,
+    "tool_ms": 446,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > game.html <<'HTML'\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  html, body {\\n    margin: 0;\\n    padding: 0;\\n    height: 100%;\\n    backgr"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 189,
+    "api_ms": 7913,
+    "tool_ms": 564,
+    "tool_calls": [
+     "bash :: {\"command\": \"python3 - <<'PY'\\nimport re, subprocess, sys, tempfile, os\\nhtml = open('game.html', encoding='utf-8').read()\\nscripts = re.findall(r'<script>(.*?)</script>', html, re.S)\\nprint('script blocks:', len(scripts))\\nfor i, s in enumerate(scripts):\\n    with tempfile.NamedTemporaryFile('w', s"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 299,
+    "api_ms": 8274,
+    "tool_ms": 394,
+    "tool_calls": [
+     "bash :: {\"command\": \"node - <<'NODE'\\nconst fs = require('fs');\\nconst vm = require('vm');\\nconst html = fs.readFileSync('game.html', 'utf8');\\nconst scripts = [...html.matchAll(/<script>([\\\\s\\\\S]*?)<\\\\/script>/g)].map(m => m[1]);\\nconsole.log('script blocks:', scripts.length);\\nfor (let i = 0; i < scripts."
+    ]
+   }
+  ]
+ },
+ "2a_min_dec_r1": {
+  "label": "2a_min_dec_r1",
+  "produced": true,
+  "first_write_round": null,
+  "rounds_used": 6,
+  "we": 124,
+  "i": 11,
+  "ratio": 0.92,
+  "errs": 1,
+  "api_wall_s": 164.1,
+  "tool_wall_s": 2.8,
+  "total_wall_s": 166.9,
+  "prompt_tokens": 48932,
+  "completion_tokens": 9960,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 21683,
+    "api_ms": 114215,
+    "tool_ms": 409,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > game.html <<'EOF'\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n  <meta charset=\\\"UTF-8\\\">\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n  <title>Snake Game</title>\\n  <style>\\n    * {\\n      box-sizing: border-box;\\n      margin: 0;\\n      padding"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 866,
+    "api_ms": 7075,
+    "tool_ms": 403,
+    "tool_calls": [
+     "bash :: {\"command\": \"ls -la game.html 2>/dev/null; wc -c game.html 2>/dev/null; tail -n 5 game.html 2>/dev/null\"}"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 286,
+    "api_ms": 5130,
+    "tool_ms": 345,
+    "tool_calls": [
+     "bash :: {\"command\": \"grep -n \\\"Test hook\\\\|__snake\\\\|script\\\\|html\\\\|EOF\\\" game.html | head -n 20; echo '---'; sed -n '280,360p' game.html\"}"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 1500,
+    "api_ms": 11056,
+    "tool_ms": 350,
+    "tool_calls": [
+     "bash :: {\"command\": \"wc -l game.html; sed -n '330,360p' game.html\"}"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 1933,
+    "api_ms": 12970,
+    "tool_ms": 929,
+    "tool_calls": [
+     "bash :: {\"command\": \"tail -c 100 game.html | od -c\"}"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 2144,
+    "api_ms": 13639,
+    "tool_ms": 388,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat >> game.html <<'EOF'\\n          case 's':\\n          case 'S':\\n            setDirection(0, 1);\\n            break;\\n          case 'a':\\n          case 'A':\\n            setDirection(-1, 0);\\n            break;\\n          case 'd':\\n          case 'D':\\n            setDirection(1, "
+    ]
+   }
+  ]
+ },
+ "3b_lib_base_r1": {
+  "label": "3b_lib_base_r1",
+  "produced": true,
+  "first_write_round": 3,
+  "rounds_used": 6,
+  "we": 44,
+  "i": 0,
+  "ratio": 1.0,
+  "errs": 1,
+  "api_wall_s": 85.6,
+  "tool_wall_s": 2.1,
+  "total_wall_s": 87.7,
+  "prompt_tokens": 20606,
+  "completion_tokens": 4887,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 1826,
+    "api_ms": 29952,
+    "tool_ms": 398,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > game.html <<'EOF'\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  * {\\n    box-sizing: border-box;\\n    margin: 0;\\n    padding: 0;\\n  }\\n\\n  b"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 94,
+    "api_ms": 3447,
+    "tool_ms": 299,
+    "tool_calls": [
+     "bash :: {\"command\": \"command -v node || command -v python3 || command -v python\"}"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 0,
+    "api_ms": 3670,
+    "tool_ms": 631,
+    "tool_calls": [
+     "bash :: {\"command\": \"python3 - <<'PY'\\nimport re\\nhtml = open('game.html', encoding='utf-8').read()\\nscripts = re.findall(r'<script>(.*?)</script>', html, re.S)\\nprint('script blocks:', len(scripts))\\nopen('game_script.js', 'w', encoding='utf-8').write(scripts[0])\\nprint('wrote game_script.js')\\nPY\\nnode --"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 200,
+    "api_ms": 4765,
+    "tool_ms": 509,
+    "tool_calls": [
+     "bash :: {\"command\": \"command -v python; python --version 2>/dev/null; python - <<'PY'\\nimport re\\nhtml = open('game.html', encoding='utf-8').read()\\nscripts = re.findall(r'<script>(.*?)</script>', html, re.S)\\nprint('script blocks:', len(scripts))\\nopen('game_script.js', 'w', encoding='utf-8').write(scripts"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 6325,
+    "api_ms": 41047,
+    "tool_ms": 0,
+    "tool_calls": [
+     "str_replace_editor :: {\"action\": \"str_replace\", \"path\": \"game.html\", \"old_string\": \"    // Self collision (a move into the neck is impossible with normal controls,\\n    // but this catches any other segment)\\n    for (var i = 0; i < snake.length; i++) {\\n      if (snake[i].x === newHead.x && snake[i].y === newHead.y) {\\n"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 50,
+    "api_ms": 2675,
+    "tool_ms": 294,
+    "tool_calls": [
+     "bash :: {\"command\": \"grep -n \\\"Self collision\\\" -A20 -B2 game.html\"}"
+    ]
+   }
+  ]
+ },
+ "3a_lib_dec_r0": {
+  "label": "3a_lib_dec_r0",
+  "produced": true,
+  "first_write_round": null,
+  "rounds_used": 6,
+  "we": 106,
+  "i": 0,
+  "ratio": 1.0,
+  "errs": 1,
+  "api_wall_s": 144.7,
+  "tool_wall_s": 2.4,
+  "total_wall_s": 147.1,
+  "prompt_tokens": 41834,
+  "completion_tokens": 8463,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 20441,
+    "api_ms": 103420,
+    "tool_ms": 518,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd && node --version 2>/dev/null || echo 'node not found'; python3 --version 2>/dev/null || echo 'python3 not found'\"}"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 241,
+    "api_ms": 5278,
+    "tool_ms": 392,
+    "tool_calls": [
+     "bash :: {\"command\": \"python --version 2>/dev/null || echo 'python not found'; which python python3 node 2>/dev/null; ls -la\"}"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 96,
+    "api_ms": 22729,
+    "tool_ms": 409,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > game.html <<'EOF'\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n  <meta charset=\\\"UTF-8\\\">\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n  <title>Snake Game</title>\\n  <style>\\n    * { box-sizing: border-box; }\\n\\n    body {\\n      margin: 0;\\n    "
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 170,
+    "api_ms": 4307,
+    "tool_ms": 376,
+    "tool_calls": [
+     "bash :: {\"command\": \"ls -la game.html 2>/dev/null && wc -c game.html || echo 'game.html not created'\"}"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 236,
+    "api_ms": 3656,
+    "tool_ms": 349,
+    "tool_calls": [
+     "bash :: {\"command\": \"tail -n 20 game.html && echo '---' && head -n 5 game.html\"}"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 346,
+    "api_ms": 5331,
+    "tool_ms": 347,
+    "tool_calls": [
+     "bash :: {\"command\": \"tail -n 40 game.html\"}"
+    ]
+   }
+  ]
+ },
+ "3a_lib_dec_r1": {
+  "label": "3a_lib_dec_r1",
+  "produced": true,
+  "first_write_round": null,
+  "rounds_used": 6,
+  "we": 73,
+  "i": 9,
+  "ratio": 0.89,
+  "errs": 1,
+  "api_wall_s": 110.7,
+  "tool_wall_s": 2.6,
+  "total_wall_s": 113.3,
+  "prompt_tokens": 37585,
+  "completion_tokens": 7753,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 16449,
+    "api_ms": 63181,
+    "tool_ms": 356,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd && ls -la\"}"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 39,
+    "api_ms": 21481,
+    "tool_ms": 418,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > game.html <<'EOF'\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  body {\\n    margin: 0;\\n    min-height: 100vh;\\n    display: flex;\\n    flex-"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 125,
+    "api_ms": 8229,
+    "tool_ms": 478,
+    "tool_calls": [
+     "bash :: {\"command\": \"python3 - <<'PY'\\nfrom pathlib import Path\\nimport re, subprocess, tempfile, os\\nhtml = Path('game.html').read_text(encoding='utf-8')\\nchecks = {\\n    'DOCTYPE html': '<!DOCTYPE html>' in html,\\n    'canvas element': '<canvas id=\\\"gameCanvas\\\"' in html,\\n    'score display': 'id=\\\"score"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 171,
+    "api_ms": 4285,
+    "tool_ms": 459,
+    "tool_calls": [
+     "bash :: {\"command\": \"which node && node --version && which python3 || true && which python || true\"}"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 194,
+    "api_ms": 9031,
+    "tool_ms": 447,
+    "tool_calls": [
+     "bash :: {\"command\": \"/c/Python312/python - <<'PY'\\nfrom pathlib import Path\\nimport re, subprocess, tempfile, os\\nhtml = Path('game.html').read_text(encoding='utf-8')\\nchecks = {\\n    'DOCTYPE html': '<!DOCTYPE html>' in html,\\n    'canvas element': '<canvas id=\\\"gameCanvas\\\"' in html,\\n    'score display':"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 73,
+    "api_ms": 4455,
+    "tool_ms": 429,
+    "tool_calls": [
+     "bash :: {\"command\": \"for b in chromium chromium-browser google-chrome google-chrome-stable \\\"C:/Program Files/Google/Chrome/Application/chrome.exe\\\" \\\"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe\\\"; do\\n  if command -v \\\"$b\\\" >/dev/null 2>&1 || [ -x \\\"$b\\\" ]; then echo \\\"FOUND: $b\\\"; fi\\ndon"
+    ]
+   }
+  ]
+ },
+ "4b_anch_base_r0": {
+  "label": "4b_anch_base_r0",
+  "produced": true,
+  "first_write_round": 5,
+  "rounds_used": 6,
+  "we": 49,
+  "i": 6,
+  "ratio": 0.89,
+  "errs": 1,
+  "api_wall_s": 119.1,
+  "tool_wall_s": 1.9,
+  "total_wall_s": 121.1,
+  "prompt_tokens": 35879,
+  "completion_tokens": 8606,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 6483,
+    "api_ms": 64959,
+    "tool_ms": 450,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat << 'EOF' > game.html\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  * {\\n    box-sizing: border-box;\\n    margin: 0;\\n    padding: 0;\\n  }\\n  bo"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 653,
+    "api_ms": 5770,
+    "tool_ms": 380,
+    "tool_calls": [
+     "bash :: {\"command\": \"ls -la game.html && head -n 5 game.html && tail -n 10 game.html\"}"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 228,
+    "api_ms": 4941,
+    "tool_ms": 385,
+    "tool_calls": [
+     "bash :: {\"command\": \"grep -n \\\"EOF\\\" game.html || true; tail -c 100 game.html; echo\"}"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 302,
+    "api_ms": 4322,
+    "tool_ms": 335,
+    "tool_calls": [
+     "bash :: {\"command\": \"tail -n 30 game.html\"}"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 1657,
+    "api_ms": 35227,
+    "tool_ms": 0,
+    "tool_calls": [
+     "write_file :: {\"path\": \"game.html\", \"content\": \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  * {\\n    box-sizing: border-box;\\n    margin: 0;\\n    padding: 0;\\n  }\\n  body {\\"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 117,
+    "api_ms": 3901,
+    "tool_ms": 389,
+    "tool_calls": [
+     "bash :: {\"command\": \"ls -la game.html && wc -c game.html && tail -n 12 game.html\"}"
+    ]
+   }
+  ]
+ },
+ "4a_anch_dec_r0": {
+  "label": "4a_anch_dec_r0",
+  "produced": true,
+  "first_write_round": null,
+  "rounds_used": 6,
+  "we": 129,
+  "i": 1,
+  "ratio": 0.99,
+  "errs": 2,
+  "api_wall_s": 181.0,
+  "tool_wall_s": 4.5,
+  "total_wall_s": 185.6,
+  "prompt_tokens": 49053,
+  "completion_tokens": 11259,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 21367,
+    "api_ms": 98443,
+    "tool_ms": 322,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd && ls -la game.html 2>/dev/null || echo 'game.html does not exist yet'\"}"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 33,
+    "api_ms": 21678,
+    "tool_ms": 421,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > game.html <<'EOF'\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  body {\\n    margin: 0;\\n    min-height: 100vh;\\n    display: flex;\\n    flex-"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 127,
+    "api_ms": 5369,
+    "tool_ms": 2354,
+    "tool_calls": [
+     "bash :: {\"command\": \"set -e\\necho \\\"--- structural checks ---\\\"\\ngrep -q '<!DOCTYPE html>' game.html && echo 'doctype ok'\\ngrep -q '<canvas id=\\\"game\\\"' game.html && echo 'canvas ok'\\ngrep -q '<div id=\\\"score\\\">Score: 0</div>' game.html && echo 'score element ok'\\ngrep -q '<script>' game.html && grep -q '</"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 506,
+    "api_ms": 5696,
+    "tool_ms": 458,
+    "tool_calls": [
+     "bash :: {\"command\": \"awk '/<script>/{flag=1;next}/<\\\\/script>/{flag=0}flag' game.html > snake_game_check.js\\nls -la snake_game_check.js\\nnode --check snake_game_check.js && echo 'JS syntax ok'\\nrm snake_game_check.js\"}"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 4177,
+    "api_ms": 34276,
+    "tool_ms": 423,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > snake_sim.js <<'EOF'\\nconst fs = require('fs');\\nconst vm = require('vm');\\n\\nconst html = fs.readFileSync('game.html', 'utf8');\\nconst scriptMatch = html.match(/<script>([\\\\s\\\\S]*?)<\\\\/script>/);\\nif (!scriptMatch) { console.error('script not found'); process.exit(1); }\\nconst js"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 2390,
+    "api_ms": 15582,
+    "tool_ms": 541,
+    "tool_calls": [
+     "bash :: {\"command\": \"echo \\\"--- final checks ---\\\"\\ntest -s game.html && echo 'game.html exists and is non-empty'\\nif grep -nE 'src=|href=.*http|link rel' game.html; then\\n  echo 'WARNING: possible external references found'\\nelse\\n  echo 'no external references found'\\nfi\\npython3 - <<'PY'\\nfrom html.parse"
+    ]
+   }
+  ]
+ },
+ "4a_anch_dec_r1": {
+  "label": "4a_anch_dec_r1",
+  "produced": true,
+  "first_write_round": 4,
+  "rounds_used": 6,
+  "we": 138,
+  "i": 3,
+  "ratio": 0.98,
+  "errs": 3,
+  "api_wall_s": 218.2,
+  "tool_wall_s": 2.5,
+  "total_wall_s": 220.7,
+  "prompt_tokens": 58152,
+  "completion_tokens": 13425,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 26346,
+    "api_ms": 124844,
+    "tool_ms": 374,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd && ls -la && (command -v node || true) && (command -v python3 || true) && (command -v chromium || command -v chromium-browser || command -v google-chrome || true)\"}"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 171,
+    "api_ms": 25134,
+    "tool_ms": 389,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > game.html <<'EOF'\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  * { box-sizing: border-box; }\\n  html, body { margin: 0; padding: 0; }\\n  bod"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 175,
+    "api_ms": 7944,
+    "tool_ms": 899,
+    "tool_calls": [
+     "bash :: {\"command\": \"set -e\\necho \\\"--- File type ---\\\"\\nfile game.html\\necho \\\"--- Basic presence checks ---\\\"\\ngrep -q '<!DOCTYPE html>' game.html && echo \\\"doctype: ok\\\"\\ngrep -q '<canvas id=\\\"gameCanvas\\\"' game.html && echo \\\"canvas: ok\\\"\\ngrep -q 'ArrowUp' game.html && grep -q 'ArrowDown' game.html && "
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 255,
+    "api_ms": 5600,
+    "tool_ms": 453,
+    "tool_calls": [
+     "bash :: {\"command\": \"set -e\\nnode - <<'NODE'\\nconst fs = require('fs');\\nconst html = fs.readFileSync('game.html', 'utf8');\\nconst m = html.match(/<script>([\\\\s\\\\S]*)<\\\\/script>/);\\nif (!m) { console.error('inline script not found'); process.exit(1); }\\nfs.writeFileSync('/tmp/game_script.js', m[1]);\\nconsol"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 3861,
+    "api_ms": 33538,
+    "tool_ms": 402,
+    "tool_calls": [
+     "bash :: {\"command\": \"node - <<'NODE'\\n'use strict';\\nconst fs = require('fs');\\nconst html = fs.readFileSync('game.html', 'utf8');\\nconst m = html.match(/<script>([\\\\s\\\\S]*)<\\\\/script>/);\\nif (!m) { console.error('script not found'); process.exit(1); }\\nconst js = m[1];\\n\\nlet rafCb = null;\\nlet rafId = 0;\\"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 2882,
+    "api_ms": 21119,
+    "tool_ms": 0,
+    "tool_calls": [
+     "str_replace_editor :: {\"action\": \"str_replace\", \"path\": \"/tmp/dsh_cot_probe/par_4a_anch_dec/rep1/game.html\", \"old_string\": \"    gameOver = false;\\n    overlay.classList.remove('visible');\", \"new_string\": \"    gameOver = false;\\n    lastTick = null;\\n    overlay.classList.remove('visible');\"}"
+    ]
+   }
+  ]
+ },
+ "4b_anch_base_r1": {
+  "label": "4b_anch_base_r1",
+  "produced": true,
+  "first_write_round": 3,
+  "rounds_used": 6,
+  "we": 34,
+  "i": 2,
+  "ratio": 0.94,
+  "errs": 3,
+  "api_wall_s": 123.0,
+  "tool_wall_s": 1.5,
+  "total_wall_s": 124.5,
+  "prompt_tokens": 40202,
+  "completion_tokens": 10679,
+  "error": null,
+  "rounds": [
+   {
+    "round": 1,
+    "reasoning_chars": 3483,
+    "api_ms": 50671,
+    "tool_ms": 0,
+    "tool_calls": [
+     "str_replace_editor :: {\"action\": \"create\", \"path\": \"/home/ubuntu/game.html\", \"new_string\": \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  * {\\n    box-sizing: border-box;\\n  }\\n\\n  bo"
+    ]
+   },
+   {
+    "round": 2,
+    "reasoning_chars": 75,
+    "api_ms": 3941,
+    "tool_ms": 319,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd && ls -la\"}"
+    ]
+   },
+   {
+    "round": 3,
+    "reasoning_chars": 112,
+    "api_ms": 27191,
+    "tool_ms": 1,
+    "tool_calls": [
+     "write_file :: {\"path\": \"/tmp/dsh_cot_probe/par_4b_anch_base/rep1/game.html\", \"content\": \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  * {\\n    box-sizing: border-box;\\n  }\\n\\"
+    ]
+   },
+   {
+    "round": 4,
+    "reasoning_chars": 517,
+    "api_ms": 6631,
+    "tool_ms": 344,
+    "tool_calls": [
+     "bash :: {\"command\": \"pwd; touch game.html; ls -la game.html\"}"
+    ]
+   },
+   {
+    "round": 5,
+    "reasoning_chars": 200,
+    "api_ms": 28469,
+    "tool_ms": 405,
+    "tool_calls": [
+     "bash :: {\"command\": \"cat > game.html <<'HTMLEOF'\\n<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Snake Game</title>\\n<style>\\n  * {\\n    box-sizing: border-box;\\n  }\\n\\n  body {\\n    margin: 0;\\n    mi"
+    ]
+   },
+   {
+    "round": 6,
+    "reasoning_chars": 626,
+    "api_ms": 6114,
+    "tool_ms": 390,
+    "tool_calls": [
+     "bash :: {\"command\": \"ls -la game.html; wc -c game.html; head -3 game.html; tail -5 game.html\"}"
+    ]
+   }
+  ]
+ }
+}

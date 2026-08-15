@@ -1,15 +1,11 @@
 # scaffold-cot-probe
 
-> **AI-generated research artifact** - This repository contains scripts produced
-> during experimental research into LLM agent scaffold behavior (system prompt +
-> tool catalog effects on chain-of-thought). The findings are empirical results
-> from one specific model (DeepSeek V4 Pro) and should not be treated as general
-> model rankings.
-
-Probe scripts for measuring how an LLM agent's **scaffold** (persona text, tool
-catalog, tool names, injection position, reasoning effort) changes its
-chain-of-thought trajectory (`we`-collective vs `let me`-self style), output
-quality, and wall-clock/token cost.
+Independent replication of the DeepSeek V4 Pro scaffold experiments from
+[xiaobright/modeltest](https://github.com/xiaobright/modeltest), run step by
+step with the user on 2026-08-15. These scripts measure how an LLM agent's
+**scaffold** (persona text, tool catalog, tool names, injection position,
+reasoning effort) changes its chain-of-thought trajectory (`we`-collective vs
+`let me`-self style), output quality, and wall-clock/token cost.
 
 ## Background
 
@@ -17,8 +13,9 @@ Official harnesses like DeepSeek Harness ship a "minimal" preset that sends the
 model's *exact RL prompt and schemas* (one-line persona + two training-aligned
 tools). Models are highly sensitive to scaffold: the same model scores 99 with
 its native minimal scaffold and 91-93 under thicker generic harnesses. These
-scripts reproduce and quantify that effect, and test optimizations such as
-external toolkits, recommendation placement, and tool naming.
+scripts independently reproduce and quantify that effect, and test
+optimizations such as external toolkits, recommendation placement, and tool
+naming.
 
 ## Key empirical findings (dsv4p, 2026-08)
 

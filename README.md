@@ -1,11 +1,11 @@
 # scaffold-cot-probe
 
 Independent replication of the DeepSeek V4 Pro scaffold experiments from
-[xiaobright/modeltest](https://github.com/xiaobright/modeltest), run step by
-step with the user on 2026-08-15. These scripts measure how an LLM agent's
-**scaffold** (persona text, tool catalog, tool names, injection position,
-reasoning effort) changes its chain-of-thought trajectory (`we`-collective vs
-`let me`-self style), output quality, and wall-clock/token cost.
+[xiaobright/modeltest](https://github.com/xiaobright/modeltest). These scripts
+measure how an LLM agent's **scaffold** (persona text, tool catalog, tool names,
+injection position, reasoning effort) changes its chain-of-thought trajectory
+(`we`-collective vs `let me`-self style), output quality, and wall-clock/token
+cost.
 
 ## Background
 
